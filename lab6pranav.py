@@ -5,11 +5,7 @@ def encoded(digit):
         encoder += encoded
     return encoder
 def decoded(encoder):
-    decoder = ''
-    for x in encoder:
-        decoded = str((int(x) - 3) % 10)
-        decoder += decoded
-    return decoder
+    
 
 
 def main():
