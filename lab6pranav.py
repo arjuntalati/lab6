@@ -5,11 +5,16 @@ def encoded(digit):
         encoder += encoded
     return encoder
 def decoded(encoder):
-    decoder = ''
-    for x in encoder:
-        decoded = str((int(x) - 3) % 10)
-        decoder += decoded
-    return decoder
+    decPassword = ""
+    if len(encoder) != 8 or not encoder.isdigit():
+        print("Invalid input. Encoded password must be an 8-digit string containing only integers.")
+        return None
+
+    for digit in encoder:
+        decDigit = str((int(digit) - 3) % 10)
+        decPassword += decDigit
+
+    return decPassword
 
 
 def main():
